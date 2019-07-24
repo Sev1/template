@@ -1,0 +1,93 @@
+@import './base.less';
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, textarea, p, th, td, hr, button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB";
+  color: #323232;
+  // -webkit-text-size-adjust:100%;
+  -webkit-text-size-adjust:auto;
+}
+input, textarea{
+  outline: none;
+  border: 0 none;
+  -webkit-tap-highlight-color:transparent;  //ios去掉选择阴影
+}
+button {
+    border: 0 none;
+}
+i {
+  font-style: normal;
+}
+ol, ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+/* 清理浮动 */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: "";
+    clear: both;
+    height: 0;
+    line-height:0;
+}
+
+.clearfix {
+    zoom: 1; /* for IE6 IE7 */
+}
+
+/* 单行文字溢出时出现省略号，需设定宽度 */
+.ellips {
+    overflow: hidden;
+    white-space: nowrap;    
+    text-overflow: ellipsis;
+}
+
+html,body{
+  width: 100%;
+  height: auto !important;
+  overflow-x: auto;
+}
+html{
+  margin: 0;
+  padding: 0;
+  // font-size: @font-size;  //750px，1vw = 750*1%=7.5px
+  font-size: 13.33333333vw !important;
+}
+
+// 兼容ipad和pc端大屏幕
+@media screen and (min-width: 560px){
+  html{
+    font-size: 54px;
+  }
+}
+
+/* @media screen and (max-width:320px){兼容iphone5
+    .symptomDes .arrorTop p {
+        padding-left: 0 !important;
+        text-align: right;
+    }
+    .resultSym {
+      overflow: hidden;
+      white-space: nowrap;    
+      text-overflow: ellipsis;
+      width: 110px;
+    }
+    .main .mainBtm .Recommend {
+      font-size: 14px !important;
+    }
+    .main .mainBtm .Recommend .btn {
+      padding: 0 10px !important;
+    }
+} */ 
